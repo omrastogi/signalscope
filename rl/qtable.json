@@ -1,0 +1,2522 @@
+{
+  "trend=low|volume=nan|volatility=nan|recent_return=low|sec_ai=nan|position=0": [
+    0.2075352788174273,
+    0.20317243350896946,
+    0.20138141191299624
+  ],
+  "trend=low|volume=nan|volatility=nan|recent_return=medium|sec_ai=nan|position=0": [
+    0.20106760880312033,
+    0.1995525208882917,
+    0.19848344047104938
+  ],
+  "trend=low|volume=nan|volatility=nan|recent_return=high|sec_ai=nan|position=1": [
+    0.20263949627803426,
+    0.17706131794173927,
+    0.14366232706847787
+  ],
+  "trend=low|volume=nan|volatility=nan|recent_return=medium|sec_ai=nan|position=1": [
+    0.20241334897069505,
+    0.17081921718677098,
+    0.17563207935964828
+  ],
+  "trend=low|volume=nan|volatility=nan|recent_return=low|sec_ai=nan|position=1": [
+    0.2079212636047951,
+    0.1731592200791098,
+    0.17261616301923963
+  ],
+  "trend=low|volume=nan|volatility=nan|recent_return=high|sec_ai=nan|position=0": [
+    0.19965041432625155,
+    0.20002745788881296,
+    0.19685289303664005
+  ],
+  "trend=low|volume=medium|volatility=nan|recent_return=high|sec_ai=nan|position=1": [
+    0.2030564981447098,
+    0.10346574775963618,
+    0.06555231699249425
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=low|sec_ai=nan|position=1": [
+    0.22339400288376257,
+    0.23130615465119647,
+    0.24464772404421856
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=medium|sec_ai=nan|position=1": [
+    0.22367988267802527,
+    0.20901190793132013,
+    0.21496776761914366
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=low|sec_ai=nan|position=0": [
+    0.21591076393753017,
+    0.21818229641582793,
+    0.21421634409809595
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=low|sec_ai=nan|position=0": [
+    0.21766309206229123,
+    0.22047789662898962,
+    0.2229860125908215
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=high|sec_ai=nan|position=0": [
+    0.2154253183403935,
+    0.21380007054700367,
+    0.21474040640580228
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=medium|sec_ai=nan|position=0": [
+    0.22401127396090578,
+    0.22034773331991206,
+    0.22020979259918078
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=high|sec_ai=nan|position=0": [
+    0.22287606026697693,
+    0.2241962500144385,
+    0.24065579053555305
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=high|sec_ai=nan|position=1": [
+    0.22486086182504422,
+    0.2340121553418079,
+    0.22752972651132014
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=high|sec_ai=nan|position=1": [
+    0.22000701300062023,
+    0.21189087011533037,
+    0.21024790552968717
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.20216281806641095,
+    0.18981424109555045,
+    0.20046165063078505
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.19110661316321464,
+    0.22134618495615316,
+    0.20831507049247414
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.2059267086715681,
+    0.2021140602580217,
+    0.19970342152085999
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.20545823480575423,
+    0.19055035323930272,
+    0.19078114226193313
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.20227688845604638,
+    0.2052131793877514,
+    0.18969154474377586
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.20815379566927375,
+    0.20113030554549607,
+    0.201948407048049
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.21018747328334758,
+    0.17798089467741407,
+    0.18005189960172518
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.20841291545814514,
+    0.2028501058059823,
+    0.1985889264850856
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.2107011783465547,
+    0.20893120116591868,
+    0.2147162053224276
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.20220541604688724,
+    0.2070775441843772,
+    0.1985940186187827
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.21092367361031328,
+    0.20420880271207517,
+    0.19621195984187725
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.2062118247519358,
+    0.1887896007826504,
+    0.20167831575118522
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.2049892051399135,
+    0.20686999915905227,
+    0.2042806124293003
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.2022429080611287,
+    0.2020373742150097,
+    0.17553176244200877
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.20795826861950512,
+    0.21709295912643692,
+    0.20343966237772868
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.203223798652156,
+    0.19692791540840332,
+    0.21289097910438556
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.18749122527338108,
+    0.20540622201189243,
+    0.1955037768661898
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.20286612671287138,
+    0.20517606136552133,
+    0.20170242376861905
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.20381724946990928,
+    0.2055069888735957,
+    0.19917665696205505
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.20063827800467918,
+    0.20290878982374688,
+    0.18875072956645417
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.20114995626684504,
+    0.2007699833928923,
+    0.1948532342731608
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.2019490344270429,
+    0.19914934577515625,
+    0.19898602713560845
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.20402117541108591,
+    0.2026264501882221,
+    0.18894873605954204
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.20608435360393218,
+    0.1986477061571544,
+    0.20447140579006992
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.2039851042246055,
+    0.1881504511236801,
+    0.1868102150906425
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.20135078280985771,
+    0.20255196304565135,
+    0.20108481451912533
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.19461143177665935,
+    0.20242899823212565,
+    0.18721051024430813
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.2012726340146434,
+    0.2146477604287372,
+    0.22282273046614923
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.20914831013318036,
+    0.20437353751024584,
+    0.2044387097989403
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.2583428128917583,
+    0.2581274582832958,
+    0.28628590440678264
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.2704859082831371,
+    0.2800394209550561,
+    0.27029249394949
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.25591012612166636,
+    0.2669623051669007,
+    0.2524318560498277
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.22678776258863667,
+    0.22743427680224385,
+    0.28713189961008995
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.22833689470314478,
+    0.2252532404965061,
+    0.2343758129883084
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.25593143617312014,
+    0.21057771529018504,
+    0.22182697975730467
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.24428161367844237,
+    0.28361422453978463,
+    0.2803259830115116
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.22943633558385598,
+    0.22707505933000824,
+    0.21378681486814105
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.22017780950887922,
+    0.21732026045771574,
+    0.19787966837828444
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.22301575117001057,
+    0.1824687306688774,
+    0.18077550987337954
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.19483152655626992,
+    0.18702051557438987,
+    0.17768401389969213
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.2642887360292794,
+    0.25040741916312653,
+    0.25439526668076584
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.20110625240603008,
+    0.20458747194959484,
+    0.21001610686826716
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.19384223776585469,
+    0.19460680580661163,
+    0.20623310769690495
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.20835970109186033,
+    0.2189278808145393,
+    0.21446229177922005
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.23089465324681824,
+    0.2144039820057519,
+    0.22130503129455878
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.20126474441330597,
+    0.18507940755353794,
+    0.18915321621909054
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.22019586577449993,
+    0.21360716606060695,
+    0.22092148139224144
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.2585566568526001,
+    0.23513717048911506,
+    0.24235912848418728
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.20669228940358456,
+    0.20356534273499338,
+    0.1995754803151065
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.21135093381936756,
+    0.21708841645720514,
+    0.20821717485958247
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.24443879178829434,
+    0.24535549840299986,
+    0.26460480034518485
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.2501319606066109,
+    0.24552445259081693,
+    0.2392635341065151
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.22299280161363194,
+    0.23431301134957971,
+    0.2257453774513034
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.3575646167426163,
+    0.3521978008502716,
+    0.37847312100231434
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.3652705770758513,
+    0.3609836107512268,
+    0.3725488621453
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.36640991498872094,
+    0.36696689228215323,
+    0.3805122087763768
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.36787730464645235,
+    0.364948230948899,
+    0.36130969645251015
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.3634422748423159,
+    0.3662584867633643,
+    0.3604954458794984
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.3662569842947456,
+    0.3644652151897835,
+    0.35063746256319933
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.36912872274858594,
+    0.3498062034593581,
+    0.3487036285709281
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.36004703457285336,
+    0.3559411594206348,
+    0.3645167135004314
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.35309566316729446,
+    0.3532791544640998,
+    0.3747619716414435
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.3677334752233352,
+    0.35015343750376127,
+    0.3508023568472778
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.36736032344940045,
+    0.3480853817362682,
+    0.3458377779944541
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.37073101981254625,
+    0.36141092904918715,
+    0.36237284268979053
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=high|sec_ai=high|position=1": [
+    0.3255621802850516,
+    0.322578625424708,
+    0.34011264966493004
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=medium|sec_ai=high|position=1": [
+    0.3599137573047155,
+    0.3067805219148348,
+    0.31782084268705546
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=medium|sec_ai=high|position=1": [
+    0.29102674753157987,
+    0.30222172568092154,
+    0.2942439219618429
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=low|sec_ai=high|position=1": [
+    0.3306012322670313,
+    0.30994774233115097,
+    0.3119584688443982
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=medium|sec_ai=high|position=1": [
+    0.3140893653055096,
+    0.3283251493087005,
+    0.30854365742530887
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=high|sec_ai=high|position=0": [
+    0.30001883115676115,
+    0.3010216553060681,
+    0.3167175197784431
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.3608180444411632,
+    0.3625574748272328,
+    0.37137549827961924
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.3700756036265681,
+    0.3635333278579173,
+    0.3614203790269896
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.36543175477677886,
+    0.36780682754483174,
+    0.3473390724324215
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.3338476889094152,
+    0.34799007011456484,
+    0.3615410814363701
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=high|sec_ai=high|position=0": [
+    0.3101266757790696,
+    0.3084476320115652,
+    0.2928798508095521
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=medium|sec_ai=high|position=0": [
+    0.31032261224197866,
+    0.30164281437763696,
+    0.30370867696066284
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=low|sec_ai=high|position=0": [
+    0.3150991195303375,
+    0.31330985062078404,
+    0.31271204902437405
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=medium|sec_ai=high|position=0": [
+    0.28436150535684235,
+    0.29150221481334865,
+    0.28357294447157255
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=low|sec_ai=high|position=1": [
+    0.2901698835398298,
+    0.2771439510796573,
+    0.2791349275941114
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=medium|sec_ai=high|position=1": [
+    0.2732005633165895,
+    0.2817912030587976,
+    0.27234174123089144
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=medium|sec_ai=high|position=1": [
+    0.2844262509880681,
+    0.2827790118128975,
+    0.2804693932204501
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=medium|sec_ai=high|position=0": [
+    0.2587826367781024,
+    0.2586164691651036,
+    0.2765440395982244
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=low|sec_ai=high|position=1": [
+    0.28850264198945874,
+    0.30204600737547427,
+    0.2992343071273278
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=medium|sec_ai=high|position=1": [
+    0.2726485588164826,
+    0.28688274539753755,
+    0.2986382485262722
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.35254413711109556,
+    0.38523844301106175,
+    0.3724270082625786
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=high|sec_ai=high|position=0": [
+    0.275852113103089,
+    0.28610133441811114,
+    0.2794992070206845
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=high|sec_ai=high|position=1": [
+    0.2684261757914111,
+    0.28166961799775486,
+    0.27080401540755394
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=high|sec_ai=high|position=0": [
+    0.2725998777025638,
+    0.27357696629465045,
+    0.29127061106630797
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=low|sec_ai=high|position=1": [
+    0.28200130036706755,
+    0.28165965020287065,
+    0.287914129577453
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=high|sec_ai=high|position=0": [
+    0.22152351429411934,
+    0.24041366901843014,
+    0.2096586429182106
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=medium|sec_ai=high|position=0": [
+    0.213410163715547,
+    0.21359204718081723,
+    0.21834232078335863
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=medium|sec_ai=high|position=1": [
+    0.21390355488559396,
+    0.21086196816940778,
+    0.20735472114277445
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=high|sec_ai=high|position=1": [
+    0.1945574344447224,
+    0.17386564572721447,
+    0.17895900451146857
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=medium|sec_ai=high|position=1": [
+    0.16676053375099714,
+    0.1370339640493523,
+    0.13375491652199548
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=high|sec_ai=high|position=1": [
+    0.23286718281671878,
+    0.2143243043452147,
+    0.2250821014700711
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=low|sec_ai=high|position=0": [
+    0.17232388229242404,
+    0.15839366363217888,
+    0.17577698440822323
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=low|sec_ai=high|position=1": [
+    0.14887889989023448,
+    0.1813284354843476,
+    0.15949424683346647
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=high|sec_ai=high|position=0": [
+    0.19571852478530294,
+    0.18528813285515675,
+    0.1820810946428411
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=low|sec_ai=high|position=1": [
+    0.24811075252498122,
+    0.24388369572084773,
+    0.25327782810161165
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=high|sec_ai=high|position=0": [
+    0.2099412301173719,
+    0.22023909476805298,
+    0.20917849003042083
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=medium|sec_ai=high|position=1": [
+    0.1765570041581431,
+    0.16917138157960662,
+    0.22650236494387757
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=medium|sec_ai=high|position=0": [
+    0.1838095466230269,
+    0.18187584228036047,
+    0.19783811250695507
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=low|sec_ai=high|position=0": [
+    0.2648730575785229,
+    0.2520649935781978,
+    0.24531747185559705
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=low|sec_ai=high|position=0": [
+    0.27646688864158375,
+    0.2713331988177866,
+    0.3010481407092374
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=high|sec_ai=high|position=1": [
+    0.2563050024672394,
+    0.24309464358072955,
+    0.24475689152522448
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=high|sec_ai=high|position=0": [
+    0.2814253948358803,
+    0.2803552249984133,
+    0.34422658034181625
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=low|sec_ai=high|position=1": [
+    0.27135645034935774,
+    0.2225313948150565,
+    0.24366073264719623
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=medium|sec_ai=high|position=1": [
+    0.2902634568223395,
+    0.2804515918396865,
+    0.26509087460359637
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=low|sec_ai=high|position=0": [
+    0.2590191257494621,
+    0.2537137688914998,
+    0.24050925606619178
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=low|sec_ai=high|position=1": [
+    0.27584797077611006,
+    0.25699289629460165,
+    0.2607908598804159
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=medium|sec_ai=high|position=0": [
+    0.25950371753337237,
+    0.25538649162982285,
+    0.2721214123187612
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=high|sec_ai=high|position=0": [
+    0.2516856458515894,
+    0.2757233623310615,
+    0.2580820066283332
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=medium|sec_ai=high|position=1": [
+    0.30789894785070715,
+    0.3731274403312823,
+    0.33459918577370773
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=high|sec_ai=high|position=1": [
+    0.26664174613050484,
+    0.2598606953041937,
+    0.2560044683870236
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=high|sec_ai=high|position=0": [
+    0.27496736640726577,
+    0.24272628615123493,
+    0.2405437828904822
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=high|sec_ai=high|position=0": [
+    0.2871399231741969,
+    0.2785667776147512,
+    0.30239795823297244
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=low|sec_ai=high|position=0": [
+    0.2851779909769408,
+    0.28762557265122357,
+    0.3010669457312573
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=high|sec_ai=high|position=1": [
+    0.2872755143119391,
+    0.28247924939066776,
+    0.2787231825000038
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=high|sec_ai=high|position=1": [
+    0.28823058989915074,
+    0.2885275668855811,
+    0.2877787755343623
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=low|sec_ai=high|position=0": [
+    0.27695201764390953,
+    0.27490982132226743,
+    0.2882730195707282
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=low|sec_ai=high|position=1": [
+    0.32361303436432887,
+    0.33798108392252924,
+    0.32237860343222313
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=high|sec_ai=high|position=1": [
+    0.306557426761636,
+    0.3022243501581012,
+    0.30944502779023797
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=high|sec_ai=high|position=1": [
+    0.3145231673376367,
+    0.30941633248570194,
+    0.3061295874547817
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=high|sec_ai=high|position=0": [
+    0.3316588147189332,
+    0.3175148295117359,
+    0.32361193675312167
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=high|sec_ai=high|position=1": [
+    0.19974454866725552,
+    0.21199809973708256,
+    0.201657335382014
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=low|sec_ai=high|position=0": [
+    0.24377853067862726,
+    0.25164829834457203,
+    0.27058667121163554
+  ],
+  "trend=low|volume=low|volatility=nan|recent_return=medium|sec_ai=nan|position=0": [
+    0.20561936750500823,
+    0.2101879132044896,
+    0.18310567979101441
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=low|sec_ai=nan|position=1": [
+    0.21190882707016126,
+    0.2121492802040424,
+    0.21823194787820183
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=low|sec_ai=nan|position=0": [
+    0.21135287660836227,
+    0.21130752642061407,
+    0.20506485147730927
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=medium|sec_ai=nan|position=0": [
+    0.220248963416227,
+    0.2216563693384366,
+    0.2127408839628979
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=nan|position=0": [
+    0.22674591763537133,
+    0.2283902638586862,
+    0.22185552991119337
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.19199852396874276,
+    0.18935790299820282,
+    0.2096669095128062
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.19387915704027575,
+    0.18806457043762198,
+    0.17691459849030178
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.19494979196582535,
+    0.18249514849813983,
+    0.1817389288251928
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.19525686631605027,
+    0.1888004674035876,
+    0.18849271680503488
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.2031931303657168,
+    0.19134410807155755,
+    0.19234391151684307
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.18646729222149186,
+    0.1942197652047608,
+    0.18000402668600374
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.18784870438724588,
+    0.19340336196786795,
+    0.18311369535106514
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.18820406003605133,
+    0.1844838017630192,
+    0.19699669215161947
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.19239730105514502,
+    0.18481900919979688,
+    0.18750417986786372
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.1948751878705532,
+    0.18581834285172413,
+    0.1857342540826834
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.19151366662991326,
+    0.1765415633622593,
+    0.17611860357598763
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.18829938683936331,
+    0.18403724729639512,
+    0.18197513379979333
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.1846842860310174,
+    0.1681360707945484,
+    0.17046095712402798
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.18714001983533507,
+    0.1645967539106574,
+    0.16738111648145684
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.19008860487942134,
+    0.18631227143290452,
+    0.17358266977138556
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.18800956144866066,
+    0.18313354198758733,
+    0.20477905786400782
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.18786148258321567,
+    0.18483780603398856,
+    0.18483860790172005
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.18492536768297022,
+    0.1856368559369608,
+    0.19886670659176367
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.18393217133225218,
+    0.16356894240996497,
+    0.1418135208432977
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.18852877582022456,
+    0.18353966335565963,
+    0.1776702498667106
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.1816589233337947,
+    0.18630660786742292,
+    0.17530824309287735
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.18680461830796197,
+    0.15375306812479972,
+    0.16233287082241246
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.16769350680833278,
+    0.16319416331968423,
+    0.19654871297359858
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.18412416777357948,
+    0.15001998687148624,
+    0.14136136792337936
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.18921389796000565,
+    0.17850617898272864,
+    0.18811372261342885
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.18974168411391343,
+    0.18320308971056562,
+    0.1785821593412662
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.18936931539940885,
+    0.18428688271207447,
+    0.1590647540434989
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.1951803252197617,
+    0.18716509596868186,
+    0.18408545715488314
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.18231782110896916,
+    0.1918136616009228,
+    0.16805064789988627
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.19509494075395165,
+    0.1843757532203556,
+    0.18072551214474286
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.19415323401020593,
+    0.17585443659968253,
+    0.16979680260251798
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.19119917420855073,
+    0.17206053755791478,
+    0.16635930067688648
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.1909625664114236,
+    0.18783747320451258,
+    0.1877270653745775
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.18916452632676092,
+    0.15328382515698705,
+    0.1620222925957388
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.1873433737730577,
+    0.16457273861270152,
+    0.17703698953218977
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.1838868832706991,
+    0.14173047973883923,
+    0.14328347072586398
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.226973121408814,
+    0.051871765038732094,
+    0.0507556788205961
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.12334888655804006,
+    0.2463359721580531,
+    0.12359331960825987
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.2678265458031563,
+    0.20883594879707687,
+    0.21517898960818552
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.20417846451490304,
+    0.2232276893189602,
+    0.27050090845521485
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.26042277770060707,
+    0.23232946736310375,
+    0.20285146077440253
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.2544645214446514,
+    0.17538162189268716,
+    0.15710248193596885
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.12451042140193705,
+    0.10034620943831302,
+    0.23878202693636227
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.255763710516162,
+    0.1945807814350318,
+    0.18356690134010717
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.2573945007255767,
+    0.22720090628573375,
+    0.23154573623973723
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.25604786523555134,
+    0.23846165923180215,
+    0.23471900377782143
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.2441727917891073,
+    0.24497231437805872,
+    0.26502800835589835
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.2514313793104456,
+    0.23852727088248854,
+    0.24062199055102795
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.25788450222107817,
+    0.20840291973922748,
+    0.214762125460716
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.25275070632321767,
+    0.2284849737002565,
+    0.22658766676377862
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.24396852339095468,
+    0.23784393533176815,
+    0.2345890468132948
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.24161961758653988,
+    0.2340929359551936,
+    0.22122858249612182
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.22329115136684768,
+    0.22925832748714747,
+    0.2457310795030515
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.22826904153360664,
+    0.24416009799119529,
+    0.26557343721298987
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.24590311375140195,
+    0.272121505951146,
+    0.23285356828142564
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.26573526564650696,
+    0.24464689001682796,
+    0.22152363237395994
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.25670445441312206,
+    0.2512100895905518,
+    0.2699028191087746
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.256374174659962,
+    0.23668803170214034,
+    0.24165075163274258
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.2370735857276005,
+    0.24672567348063695,
+    0.24068698810693914
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.2976053257695588,
+    0.2986055584560191,
+    0.3048620268299115
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.2918557271689603,
+    0.29088376751093,
+    0.32850085393835865
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.3003070171778607,
+    0.30190159056224547,
+    0.2977824500073727
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.3006270255195617,
+    0.3008334451741888,
+    0.30068836627399564
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.301497803102991,
+    0.31176696960429323,
+    0.307095391207768
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=high|sec_ai=medium|position=1": [
+    0.29713879562006723,
+    0.3057876025935651,
+    0.3024195285321524
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.28190766300002773,
+    0.19317940729078845,
+    0.20087237862602075
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.23073924217770725,
+    0.05602576847037913,
+    0.06002810153389407
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.2349158861679431,
+    0.15163910186279964,
+    0.0647068360314083
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.25390308857885957,
+    0.16104731854725132,
+    0.1349963382605295
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=low|sec_ai=medium|position=1": [
+    0.2678077675824126,
+    0.2768735166605979,
+    0.28872099592428624
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.24577789672256806,
+    0.25525433901452843,
+    0.26939361759154257
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=high|sec_ai=medium|position=1": [
+    0.2636831296393034,
+    0.25172033296477847,
+    0.24809903222966187
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.23036516225285567,
+    0.23217046316235973,
+    0.2644007046607194
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.23601612752592513,
+    0.24203388425379835,
+    0.27556198364566087
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=medium|sec_ai=medium|position=1": [
+    0.2576683274351594,
+    0.28499266890423486,
+    0.3307830822079788
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.29544934653557114,
+    0.28767378959680273,
+    0.27527637065091887
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.2776139896119148,
+    0.2852645807715059,
+    0.27641102486644054
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.2875178255122925,
+    0.2755063042162585,
+    0.28016588188243735
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.27504506359507824,
+    0.28130628621704373,
+    0.29699208374152947
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.2875698906467484,
+    0.306704638652405,
+    0.30409946346869265
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.272465580819165,
+    0.27995986655751326,
+    0.29937301393145427
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.2861192093569975,
+    0.2911974579120346,
+    0.2987739248894318
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.29629439492351306,
+    0.3049271887311445,
+    0.2998941983703064
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.29610326891686645,
+    0.30433450351808117,
+    0.2943367225135769
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.2917739153484516,
+    0.29817368934910005,
+    0.2815276705865704
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.28922577419682904,
+    0.291876788546078,
+    0.31044109919073226
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.2801811866825174,
+    0.2863971883563288,
+    0.274208716233246
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.2814881294639497,
+    0.2766729520592351,
+    0.30499054669770737
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.2928953604741729,
+    0.2799433892217013,
+    0.2798532020332622
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.2942072053483927,
+    0.2945992483614771,
+    0.30839885306203896
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.2860966903657323,
+    0.2907740881659483,
+    0.3079213628375972
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.2860880659925561,
+    0.2871778939068083,
+    0.29759346257903
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.2864288343280843,
+    0.28791119985542113,
+    0.3055661077504871
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.298496327479961,
+    0.30763902874377325,
+    0.3167795487868413
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=low|sec_ai=medium|position=1": [
+    0.3031110072459223,
+    0.30805672406802176,
+    0.3104958895998163
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.29297179752489766,
+    0.27537376305851,
+    0.27742856908011665
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.29375451841681655,
+    0.2845000784724313,
+    0.2861100159131662
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.27929555587693145,
+    0.2862240323462483,
+    0.27645604590461376
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.2504619543996108,
+    0.2520005130634681,
+    0.2573136248789905
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.23323972954837824,
+    0.21876916081826414,
+    0.20229920152781306
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.24545043802043312,
+    0.23986979509296247,
+    0.2281177732698378
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=low|sec_ai=medium|position=0": [
+    0.24852953249972737,
+    0.2464560857782742,
+    0.26354778411749924
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.23393604972037121,
+    0.22222932119457434,
+    0.21337451398883303
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.23420953022465027,
+    0.24572900057746105,
+    0.26255294394145906
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.2357274615620999,
+    0.22240730664099206,
+    0.21903737271235604
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.2408990892171773,
+    0.22702049350166703,
+    0.2277761005380629
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.2356575083937129,
+    0.21871230776570771,
+    0.21770848683033167
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.23315181819161165,
+    0.23652884541014876,
+    0.25032775538132623
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.21728994231742563,
+    0.2321997876644512,
+    0.2176697777087224
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.2387269222954132,
+    0.22530180674050732,
+    0.23036522772794946
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.20202658589470385,
+    0.20742241087631058,
+    0.21817661566654048
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.20930648831195742,
+    0.30495988985381545,
+    0.24590075377380038
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.2389566313287919,
+    0.2299043956274542,
+    0.230190275273406
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.22056183810814534,
+    0.24919277127764045,
+    0.21734876490748767
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.1687649786755844,
+    0.21687295732821804,
+    0.1561057536891338
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.25385805929396654,
+    0.24327662364464997,
+    0.2478207159541522
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.274940967472928,
+    0.2706058625075217,
+    0.2909625162320904
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.275711019962853,
+    0.2667266644392415,
+    0.2890975670441025
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=medium|sec_ai=medium|position=0": [
+    0.29303955130758397,
+    0.30788670828873377,
+    0.2770639647922268
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=medium|sec_ai=medium|position=1": [
+    0.30176540974520694,
+    0.29973202321476955,
+    0.2998616535848738
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=high|sec_ai=medium|position=0": [
+    0.28218746686673946,
+    0.2732674019584834,
+    0.31247580476332615
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.2851395908529656,
+    0.25790639998974857,
+    0.2584929389839121
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.13049315730796646,
+    0.26431320299594757,
+    0.046984742966498794
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.24531387720855471,
+    0.21538108186141453,
+    0.20918974229762105
+  ],
+  "trend=low|volume=medium|volatility=nan|recent_return=medium|sec_ai=nan|position=1": [
+    0.19154827140418568,
+    0.04565383323387384,
+    0.06237838772537215
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=medium|sec_ai=nan|position=0": [
+    0.2132047496535663,
+    0.21218593291859555,
+    0.211545044627874
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=low|sec_ai=nan|position=0": [
+    0.21637068185631156,
+    0.2136241417265851,
+    0.20978930415843222
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=low|sec_ai=nan|position=0": [
+    0.2109801147115682,
+    0.21128228385436543,
+    0.20945997851644424
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=medium|sec_ai=nan|position=0": [
+    0.21137623632706745,
+    0.2108695823163587,
+    0.20323087066478518
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=high|sec_ai=nan|position=0": [
+    0.21255247586122727,
+    0.21387332079466853,
+    0.2064031319484847
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=medium|sec_ai=nan|position=1": [
+    0.21492390815567464,
+    0.19584235534946978,
+    0.20163184318140004
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.20376263200383143,
+    0.18618103106351802,
+    0.1912335575778555
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.2028268014749951,
+    0.18497444625408085,
+    0.1768366853817321
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.21145983394432252,
+    0.18921398174337464,
+    0.15134608559167162
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.20479577188891163,
+    0.2026493218432493,
+    0.21362765269265338
+  ],
+  "trend=low|volume=high|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.20365216528160734,
+    0.2047136111338831,
+    0.1848984605929027
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.20519799498355834,
+    0.20380915220504695,
+    0.19878750216229862
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.21427818174049054,
+    0.21041370620607752,
+    0.2204666839348554
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.18311792801942134,
+    0.2140962997461213,
+    0.206773130793203
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.21725152195688713,
+    0.1727214356396141,
+    0.1520360807561019
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.2065559547731081,
+    0.13743066192432388,
+    0.08305819465188592
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.053565688852214036,
+    0.17571416333386386,
+    0.0588314393777096
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.19134587097589978,
+    0.1990534959704925,
+    0.1728722488647359
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.19147654524088248,
+    0.12437910122715161,
+    0.10665501207089793
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.20277258666987924,
+    0.20546892463519936,
+    0.19303752540096253
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.20130933984392066,
+    0.20549463612407656,
+    0.19493991211098516
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.17616634719526392,
+    0.16756662808361023,
+    0.23738590471059068
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.13091513986133474,
+    0.15724302130813844,
+    0.2259582323472482
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.21578138020552237,
+    0.174000263859698,
+    0.18283845661818246
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.19111600333519932,
+    0.19318680182097608,
+    0.21571647235758049
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.20742105383019982,
+    0.22816074334995587,
+    0.21098095737534447
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.23485903022357332,
+    0.2331446761181747,
+    0.24256700065045367
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.1958619035327152,
+    0.198855427264015,
+    0.197265587619932
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.19332413335508186,
+    0.19771639328034887,
+    0.1906746484008622
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.22935691173102993,
+    0.20168274111375512,
+    0.21177938277402028
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.21613882819316546,
+    0.2138503262763649,
+    0.22389398193782536
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.20475208969389447,
+    0.20464622013553105,
+    0.21322900365848754
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.21145188292966907,
+    0.231800829978274,
+    0.19644267480410701
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.20378425572710276,
+    0.20849852578914166,
+    0.19487475597446882
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.20553100294138163,
+    0.20165979793171493,
+    0.2047916925060673
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.19556615334631713,
+    0.19681614703539094,
+    0.18661435541283566
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.171979227343441,
+    0.174354526472253,
+    0.16993183572638035
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.16120983190659555,
+    0.15810831314152524,
+    0.1653938473458379
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.1827659090009535,
+    0.17794571253068786,
+    0.17780385429383486
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.175441829716258,
+    0.1618698801846953,
+    0.16628330673018782
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.17460482338377042,
+    0.17528539263570542,
+    0.17268580188253574
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.18543856583198814,
+    0.18257214716238152,
+    0.17454130696636538
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.14532502172586506,
+    0.15623880924734074,
+    0.14807419518854006
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.1791286434155453,
+    0.17529194580210233,
+    0.17273255933628834
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.22208510449671415,
+    0.22328114706783153,
+    0.2298583973254314
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.2323840248803103,
+    0.25639611666248696,
+    0.26586834843127793
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.24066594848127404,
+    0.24126998271717826,
+    0.24526734319560453
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.2752980239989089,
+    0.24388177868888078,
+    0.22676928461291068
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.26484824886989317,
+    0.24431573393942319,
+    0.24689628436591224
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.2710704084359309,
+    0.11125254255908194,
+    0.10666089008917043
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=low|sec_ai=low|position=1": [
+    0.2663197374077771,
+    0.1533206450849641,
+    0.15313381973611465
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.20949979791899462,
+    0.22462580765124368,
+    0.2860386475617801
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.27330863044594567,
+    0.20847011248463454,
+    0.19588141393825637
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.13483982303886047,
+    0.263821658937496,
+    0.15433688660062977
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=low|sec_ai=low|position=0": [
+    0.24842909883915024,
+    0.23397345216705326,
+    0.2709822679835946
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.23436305330100088,
+    0.2348288275038298,
+    0.2872028199639465
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.16600196007907347,
+    0.17077549479499118,
+    0.2618135918578248
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.08345240994599831,
+    0.042415196832334565,
+    0.26141978140142746
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=low|sec_ai=low|position=1": [
+    0.23445853135076936,
+    0.24502113024174205,
+    0.23207253858787136
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.23952967526382435,
+    0.24809097239620087,
+    0.25511672717017814
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.20692549816479744,
+    0.20661865898803367,
+    0.20675644084147293
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.20410269844613466,
+    0.2105810957218076,
+    0.20301800331061523
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.2132696843243007,
+    0.2096037753093103,
+    0.2063594090139674
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.21132780799093992,
+    0.21000163564514315,
+    0.2089002002409731
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.24545747994876146,
+    0.24819427211556574,
+    0.2655121010010411
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.23317744334983634,
+    0.23336800802806135,
+    0.2572223114075509
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.25062710988834624,
+    0.2556433190438608,
+    0.26126015357632815
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.23781609910941365,
+    0.23538603641339895,
+    0.23860032854257476
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.20343076583410896,
+    0.19800962300441122,
+    0.19331010032274773
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.20835196986360177,
+    0.20349998195049598,
+    0.20634667393111478
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.20086029548766998,
+    0.2039607138847464,
+    0.21133483081434606
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.20830692845674664,
+    0.20700911995882113,
+    0.21657504704949532
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.2086272032994485,
+    0.20937476322530474,
+    0.2064847653447839
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.2100300216191323,
+    0.20846317207188494,
+    0.20703657323975208
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.20850210323545657,
+    0.21242827559796915,
+    0.24801495532653886
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.2065637197922998,
+    0.20576096347430356,
+    0.2064927119600774
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.2072286302194732,
+    0.20886416566856303,
+    0.2078626031376618
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.20736439931097325,
+    0.20759243178373898,
+    0.20716454927211467
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.17421037883807855,
+    0.1657289425143292,
+    0.1638202336397628
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.1803226610666228,
+    0.17629231416161006,
+    0.17149806707819007
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.1478788544790612,
+    0.1758844895803296,
+    0.15341619901759507
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.1821336787845282,
+    0.17779719391620766,
+    0.1768621118759201
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.18222269527184318,
+    0.17131424024754663,
+    0.1744183013412166
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=medium|sec_ai=low|position=1": [
+    0.14801455517671888,
+    0.15598640403373815,
+    0.16813573088146933
+  ],
+  "trend=medium|volume=low|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.17574870312353297,
+    0.17510827726781839,
+    0.17404221939767978
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=low|sec_ai=low|position=0": [
+    0.1771312942879601,
+    0.1742410057238859,
+    0.172864856971673
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.18509652590725345,
+    0.17886464560983434,
+    0.16952345616798054
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.20792307188674533,
+    0.2136692063153545,
+    0.20939649731277424
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=medium|sec_ai=low|position=1": [
+    0.20350444815681143,
+    0.19874049824403145,
+    0.1996608870410794
+  ],
+  "trend=medium|volume=low|volatility=medium|recent_return=high|sec_ai=low|position=1": [
+    0.1885868464290625,
+    0.18774790452374887,
+    0.19212723364428277
+  ],
+  "trend=medium|volume=medium|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.174196709453854,
+    0.1681967925115853,
+    0.1688186615369067
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.20887747846646898,
+    0.2071506345753457,
+    0.20529498874680335
+  ],
+  "trend=high|volume=medium|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.20796834521622973,
+    0.20952368598044266,
+    0.20689156676331974
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.21239991989246884,
+    0.21836666073549735,
+    0.21280135143602208
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.22097074051963594,
+    0.2303056267681049,
+    0.218832584647371
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.24876354265909137,
+    0.23995523570765223,
+    0.23923040694393866
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.23733888665435626,
+    0.25131405225324577,
+    0.2375575695436043
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=high|sec_ai=low|position=0": [
+    0.17787173883487736,
+    0.23184054670003254,
+    0.16367936238215236
+  ],
+  "trend=low|volume=high|volatility=nan|recent_return=high|sec_ai=nan|position=0": [
+    0.20162040793795463,
+    0.2247564196719041,
+    0.17618899998726767
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=medium|sec_ai=nan|position=1": [
+    0.22653592110797438,
+    0.22345016517852762,
+    0.2235422521795914
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=high|sec_ai=nan|position=0": [
+    0.2186455235069657,
+    0.2178282445247243,
+    0.21654496794249628
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=low|sec_ai=nan|position=0": [
+    0.2221025961417952,
+    0.2178412728929083,
+    0.21663372874467718
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=high|sec_ai=nan|position=1": [
+    0.2181943700507628,
+    0.22450951608403308,
+    0.21861731860530287
+  ],
+  "trend=low|volume=medium|volatility=medium|recent_return=low|sec_ai=nan|position=1": [
+    0.22007806162791688,
+    0.21898548504308063,
+    0.21974289176652131
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=medium|sec_ai=nan|position=1": [
+    0.2200647022440942,
+    0.22118541492388952,
+    0.21507415379549416
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=low|sec_ai=nan|position=1": [
+    0.2200284413119614,
+    0.2175190153022037,
+    0.21680210720140597
+  ],
+  "trend=low|volume=low|volatility=medium|recent_return=medium|sec_ai=nan|position=0": [
+    0.2172519033816714,
+    0.2169859763469346,
+    0.22980139946179778
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=medium|sec_ai=nan|position=1": [
+    0.2137674101433425,
+    0.20443156994815812,
+    0.20017025664959998
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=high|sec_ai=nan|position=0": [
+    0.21081175722669873,
+    0.2108310635230953,
+    0.2037646808964523
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=medium|sec_ai=nan|position=1": [
+    0.2156342147590739,
+    0.22125937542928767,
+    0.2111503177403307
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=nan|position=0": [
+    0.23977596016524266,
+    0.23218472653085348,
+    0.23192640733569822
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=nan|position=1": [
+    0.2300708496858466,
+    0.2177720292219664,
+    0.2169660792562749
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=nan|position=1": [
+    0.23562142625639237,
+    0.2180814533025669,
+    0.22425050253747608
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=nan|position=0": [
+    0.24063064485551505,
+    0.24128598597608744,
+    0.25972681657022123
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=nan|position=0": [
+    0.23309076277259885,
+    0.23410864027235445,
+    0.2309520877299207
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=nan|position=1": [
+    0.23404800097355646,
+    0.22300857216026435,
+    0.22566649194282987
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=nan|position=0": [
+    0.23411273909736532,
+    0.23233617266311066,
+    0.23242196138026985
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=low|sec_ai=nan|position=1": [
+    0.20626489441152587,
+    0.20858954402181615,
+    0.2353440310896154
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=high|sec_ai=nan|position=1": [
+    0.20653378444678305,
+    0.221811947160971,
+    0.21241323454167
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=high|sec_ai=nan|position=1": [
+    0.21577114487075305,
+    0.19777883894535728,
+    0.19198782556770458
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.18556817092000893,
+    0.12871914529020234,
+    0.13584854725750745
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.14785621561630133,
+    0.18612615792712264,
+    0.1262098919798241
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.1775001799643162,
+    0.2022112574393854,
+    0.18301317838704356
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.14839162636894412,
+    0.14784253965338126,
+    0.1959966159637065
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=low|sec_ai=medium|position=0": [
+    0.18972543406557643,
+    0.18648353142496718,
+    0.17971571769550615
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.1818220671506216,
+    0.1918656982360794,
+    0.17129906047070073
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.15157235978839206,
+    0.17786183410130296,
+    0.147136921834541
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.17685805665710988,
+    0.17349222390570274,
+    0.1865892424380908
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.1280471371398695,
+    0.12335032544213217,
+    0.20573333679284653
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=high|sec_ai=medium|position=0": [
+    0.09233310394407827,
+    0.10269293510308425,
+    0.17616092284103732
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.18845117412745507,
+    0.16392613539574677,
+    0.16454190487786924
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=medium|sec_ai=medium|position=1": [
+    0.10725435529140454,
+    0.20849588298956617,
+    0.17474766920951723
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.1628141810731602,
+    0.245650223263039,
+    0.13521394966747063
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.2375695044436074,
+    0.21313389934070298,
+    0.21443098566145902
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.22602118567031398,
+    0.2948434481029933,
+    0.25337005617909225
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=low|sec_ai=medium|position=1": [
+    0.23307955675036546,
+    0.20522498273702333,
+    0.20462849969805344
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=low|sec_ai=high|position=0": [
+    0.23157913112087436,
+    0.22781864595148185,
+    0.24660324846260662
+  ],
+  "trend=high|volume=high|volatility=low|recent_return=medium|sec_ai=high|position=0": [
+    0.26611227755828043,
+    0.2740095695075048,
+    0.28670517535853424
+  ],
+  "trend=high|volume=low|volatility=low|recent_return=low|sec_ai=high|position=0": [
+    0.28639579952965544,
+    0.2739376739074181,
+    0.2738342855970717
+  ],
+  "trend=low|volume=low|volatility=nan|recent_return=medium|sec_ai=nan|position=1": [
+    0.19739220207518915,
+    0.10446853958326122,
+    0.09732648384274416
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=low|sec_ai=nan|position=1": [
+    0.21237964897580178,
+    0.1859978483417673,
+    0.17739860373868807
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=high|sec_ai=nan|position=0": [
+    0.2125584240038957,
+    0.2083384273125383,
+    0.21821150633910016
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=nan|position=0": [
+    0.232828524890462,
+    0.23444496169179144,
+    0.22028606612520168
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=nan|position=0": [
+    0.23260156814141755,
+    0.23419054731047878,
+    0.22953406925988973
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=nan|position=0": [
+    0.22931983310301807,
+    0.22843110903932248,
+    0.2062368426611416
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=nan|position=0": [
+    0.23111456458199256,
+    0.23034567686997323,
+    0.195920328652817
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=nan|position=1": [
+    0.22550953194796097,
+    0.22927737822229544,
+    0.2451841261581446
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=nan|position=1": [
+    0.23353423505868942,
+    0.22131329285836304,
+    0.22617973437812633
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=nan|position=1": [
+    0.23065988693187559,
+    0.18879748929093035,
+    0.1686045763413983
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=nan|position=1": [
+    0.22486619549159115,
+    0.26146656982699945,
+    0.25507906588048257
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=high|sec_ai=nan|position=1": [
+    0.2155896644001023,
+    0.1938137699311662,
+    0.20165792813913044
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=medium|sec_ai=nan|position=0": [
+    0.21568157745496744,
+    0.2130636024875391,
+    0.21995940577715686
+  ],
+  "trend=low|volume=low|volatility=nan|recent_return=high|sec_ai=nan|position=0": [
+    0.1954344469877185,
+    0.22731631835531682,
+    0.15891159586387862
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=nan|position=1": [
+    0.23446189852120536,
+    0.13954426569283973,
+    0.14509071555101766
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=nan|position=1": [
+    0.22850269735059606,
+    0.21424095637832205,
+    0.20905210231614058
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.2789463858976076,
+    0.26497386029176884,
+    0.2409969230339794
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.25921884781094,
+    0.27632362168539293,
+    0.25163925801376735
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.2757514260030516,
+    0.24713653797034105,
+    0.22716812408942585
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.2789404083672274,
+    0.24088721521218967,
+    0.2339936183873358
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.27733533721028475,
+    0.26172116966351094,
+    0.26909625070429327
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.2671722415294803,
+    0.2582237792574449,
+    0.2908115103055055
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.26566657713777636,
+    0.2796261802720124,
+    0.22600412931735633
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.2632597123039541,
+    0.2617515502229862,
+    0.3019304928917715
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.2717514457015181,
+    0.20574812382428323,
+    0.20687201803693409
+  ],
+  "trend=low|volume=high|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.27470680228068456,
+    0.2284380265846695,
+    0.23967134009470034
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.28222560851233197,
+    0.2604068473125052,
+    0.2569788985439184
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.29319096914902215,
+    0.2599649065108412,
+    0.25784396092921835
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.25097688487536224,
+    0.2894481383423472,
+    0.25836286104734785
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.27951223537030034,
+    0.25554534532360285,
+    0.24431332630549818
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.25156681550088944,
+    0.24973018788742427,
+    0.27602151176915934
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.26381152314477785,
+    0.25586124274377736,
+    0.2831219124742025
+  ],
+  "trend=low|volume=low|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.2836737729062061,
+    0.27209075245659936,
+    0.2616093168743313
+  ],
+  "trend=low|volume=medium|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.2276074481206817,
+    0.2944170728552433,
+    0.23153153127096116
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.3593672439403739,
+    0.30336714499450346,
+    0.3362953916515541
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.3536984406155257,
+    0.3538204140863532,
+    0.36122620488214785
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.36017988279650615,
+    0.3618920106556075,
+    0.3641488942864928
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.3558975400807487,
+    0.3537928031238933,
+    0.3785298309221252
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.3423159361165139,
+    0.34248400353522646,
+    0.36969083009336035
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.3413910687220311,
+    0.39524781288289823,
+    0.37576899276948905
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.34810035378325394,
+    0.36606823196529803,
+    0.3296180585122673
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.3400614772207369,
+    0.30769163703366986,
+    0.322053311700909
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=high|sec_ai=high|position=1": [
+    0.36917646298106943,
+    0.33311778993810376,
+    0.3428449751707267
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.3414756892977727,
+    0.3709011029678909,
+    0.3361415907726672
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.3433548919899111,
+    0.3330667902694091,
+    0.3830399472023989
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.3359201629025036,
+    0.34378423506256933,
+    0.35789197261843275
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=low|sec_ai=high|position=1": [
+    0.3636486934909613,
+    0.35894486827518296,
+    0.3784498285517265
+  ],
+  "trend=high|volume=low|volatility=medium|recent_return=low|sec_ai=high|position=1": [
+    0.3190010343958636,
+    0.29216389378856444,
+    0.2963511870311844
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=low|sec_ai=high|position=0": [
+    0.317501363905401,
+    0.32504251982806215,
+    0.31910586986453365
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=low|sec_ai=high|position=0": [
+    0.3114687960603034,
+    0.318844913213167,
+    0.30897390964298743
+  ],
+  "trend=high|volume=high|volatility=medium|recent_return=medium|sec_ai=high|position=0": [
+    0.3306908090623987,
+    0.3259014176429371,
+    0.37056952911777397
+  ],
+  "trend=high|volume=medium|volatility=medium|recent_return=medium|sec_ai=high|position=0": [
+    0.31467203843775193,
+    0.3096136261070559,
+    0.3390224330764044
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.20685601051182292,
+    0.1943119555686491,
+    0.36039878174898904
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=high|sec_ai=high|position=0": [
+    0.3500765336708791,
+    0.27647398019920233,
+    0.3025249602974795
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=low|sec_ai=high|position=0": [
+    0.357233764194963,
+    0.3656162440132711,
+    0.35958352373999175
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=high|sec_ai=high|position=1": [
+    0.28308938674260703,
+    0.29911267186098456,
+    0.2886700559919584
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=medium|sec_ai=high|position=0": [
+    0.2553231024905589,
+    0.2505157515202906,
+    0.2825795024647341
+  ],
+  "trend=medium|volume=medium|volatility=medium|recent_return=medium|sec_ai=high|position=1": [
+    0.25540285652004935,
+    0.2878027579924733,
+    0.30313739681479623
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=medium|sec_ai=high|position=0": [
+    0.251953858408159,
+    0.23721436249437725,
+    0.2859550514851428
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=medium|sec_ai=high|position=0": [
+    0.2141579180657116,
+    0.3396021530402286,
+    0.21904079054882397
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=low|sec_ai=high|position=1": [
+    0.2940967398957198,
+    0.31511282804526003,
+    0.3026624307882916
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=low|sec_ai=high|position=1": [
+    0.23032460318544967,
+    0.17057862071169716,
+    0.17438367862521992
+  ],
+  "trend=medium|volume=high|volatility=low|recent_return=medium|sec_ai=high|position=0": [
+    0.1374617513822251,
+    0.16296101051390177,
+    0.19063288837826614
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=medium|sec_ai=medium|position=0": [
+    0.17895001462525323,
+    0.09329837002212878,
+    0.10147097748124298
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.3242759219016992,
+    0.3857950767766891,
+    0.35559028552853755
+  ],
+  "trend=medium|volume=high|volatility=high|recent_return=medium|sec_ai=high|position=1": [
+    0.35712254350562883,
+    0.30267711404048653,
+    0.29436851948041876
+  ],
+  "trend=low|volume=medium|volatility=nan|recent_return=medium|sec_ai=nan|position=0": [
+    0.17451752389737044,
+    0.21759276004757377,
+    0.1775433131997183
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=low|sec_ai=low|position=1": [
+    0.2095941615781357,
+    0.20206724051364505,
+    0.22503347563145312
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.21622061399235054,
+    0.16343414580458324,
+    0.1633197718131894
+  ],
+  "trend=low|volume=medium|volatility=low|recent_return=high|sec_ai=low|position=1": [
+    0.19652677012296269,
+    0.13831504282485116,
+    0.1477188438101414
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=high|sec_ai=low|position=0": [
+    0.11195420513670275,
+    0.20413359639524054,
+    0.07287302875436684
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.1982669362621493,
+    0.2893827332098935,
+    0.24939485201663908
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=high|sec_ai=low|position=1": [
+    0.24546285278292898,
+    0.2593619753083006,
+    0.272880749492654
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.2120339626741129,
+    0.22948320283972304,
+    0.2701849101813545
+  ],
+  "trend=medium|volume=medium|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.06565742339374579,
+    0.23381682788828848,
+    0.09847424475868914
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.19941541370131555,
+    0.25452310083206925,
+    0.14141243165982895
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=low|sec_ai=medium|position=0": [
+    0.2299172116021637,
+    0.1963048034431662,
+    0.25870472642004627
+  ],
+  "trend=high|volume=low|volatility=high|recent_return=high|sec_ai=medium|position=0": [
+    0.2559569934719361,
+    0.11943697742597098,
+    0.08416907329280657
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=low|sec_ai=low|position=0": [
+    0.20459732964348507,
+    0.20925092033557313,
+    0.20304468137913412
+  ],
+  "trend=low|volume=medium|volatility=nan|recent_return=high|sec_ai=nan|position=0": [
+    0.20317203222604238,
+    0.2235412623847094,
+    0.15732300675782465
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=medium|sec_ai=low|position=0": [
+    0.2278493062281582,
+    0.22724064160931934,
+    0.25931736396021776
+  ],
+  "trend=low|volume=low|volatility=nan|recent_return=high|sec_ai=nan|position=1": [
+    0.18617693360166543,
+    0.04489887841985706,
+    0.0661885257335096
+  ],
+  "trend=low|volume=high|volatility=nan|recent_return=high|sec_ai=nan|position=1": [
+    0.193530628008478,
+    0.07151071924303562,
+    0.08735781819433229
+  ],
+  "trend=low|volume=low|volatility=low|recent_return=high|sec_ai=medium|position=1": [
+    0.1661914007331943,
+    0.02844977879357253,
+    0.05730339524074019
+  ],
+  "trend=medium|volume=high|volatility=medium|recent_return=medium|sec_ai=low|position=0": [
+    0.2124491383677146,
+    0.21051604498911608,
+    0.1939411689432072
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.2359523095630709,
+    0.08840569331961913,
+    0.0042573021703288935
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=high|sec_ai=low|position=0": [
+    0.07473261996829085,
+    0.2289886959992796,
+    0.03578057633037372
+  ],
+  "trend=medium|volume=low|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.21392142815296816,
+    0.26579689875969015,
+    0.18833650837222765
+  ],
+  "trend=high|volume=high|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.23112710385862073,
+    0.075472171678583,
+    0.06134118051259465
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=medium|sec_ai=medium|position=0": [
+    0.10549610487590075,
+    0.0393028739564763,
+    0.2913436769269839
+  ],
+  "trend=low|volume=high|volatility=low|recent_return=medium|sec_ai=low|position=0": [
+    0.12175542156331097,
+    0.14438350185922788,
+    0.22318643959746962
+  ],
+  "trend=high|volume=medium|volatility=high|recent_return=medium|sec_ai=low|position=1": [
+    0.24002240279147619,
+    0.26230843138866494,
+    0.24011771423203335
+  ]
+}
