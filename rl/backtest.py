@@ -1,8 +1,9 @@
 """
-Backtesting framework for SignalScope.
+Backtesting framework for SignalScope portfolio environment.
 
-Simulates three strategies on the test split (2024) and prints a
-performance comparison table: Q-learning, buy-and-hold, random.
+Runs three strategies over the test split (2024) on the full 6-ticker
+portfolio and prints a performance comparison: Q-learning, buy-and-hold,
+random. One shared $10,000 account across all tickers.
 """
 
 import random
@@ -10,42 +11,37 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-from rl.environment import load_env, N_ACTIONS
+from rl.environment import load_env, N_ACTIONS, MAX_LOTS
 from rl.agent import QLearningAgent, Q_TABLE_PATH
 
 STARTING_CAPITAL = 10_000.0
 
 
 # ------------------------------------------------------------------
-def _run_episode(env, agent_fn, ep_idx: int) -> dict:
+def _run_episode(env, agent_fn_map: dict) -> dict:
     """
-    Run a single episode with the given action function.
-    Returns a dict with performance metrics and the daily equity series.
+    Run one full episode (all test dates) with the given per-ticker action fns.
+    agent_fn_map: {ticker: callable(state_str) -> action_int}
+    Returns performance metrics and daily equity curve.
     """
-    state = env.reset(ep_idx)
-    done = False
-    equity = STARTING_CAPITAL
-    equity_curve = [equity]
+    states = env.reset()
+    done   = False
+    equity_curve  = [env.portfolio_value]
     daily_returns = []
 
     while not done:
-        action = agent_fn(state)
-        next_state, reward, done = env.step(action)
-        # reward = action * daily_return, so pct_return = reward
-        equity *= 1.0 + reward
-        equity_curve.append(equity)
-        daily_returns.append(reward)
-        state = next_state
+        actions = {t: agent_fn_map[t](states[t]) for t in env.tickers}
+        next_states, _, total_reward, done = env.step(actions)
+        equity_curve.append(env.portfolio_value)
+        daily_returns.append(total_reward)
+        states = next_states
 
-    total_return = (equity - STARTING_CAPITAL) / STARTING_CAPITAL
-    sharpe = _sharpe(daily_returns)
-    max_dd = _max_drawdown(equity_curve)
-
+    total_return = (equity_curve[-1] - STARTING_CAPITAL) / STARTING_CAPITAL
     return {
-        "total_return": total_return,
-        "sharpe": sharpe,
-        "max_drawdown": max_dd,
-        "equity_curve": equity_curve,
+        "total_return":  total_return,
+        "sharpe":        _sharpe(daily_returns),
+        "max_drawdown":  _max_drawdown(equity_curve),
+        "equity_curve":  equity_curve,
         "daily_returns": daily_returns,
     }
 
@@ -58,84 +54,67 @@ def _sharpe(daily_returns: list[float], annualize: int = 252) -> float:
 
 
 def _max_drawdown(equity_curve: list[float]) -> float:
-    eq = np.array(equity_curve)
+    eq   = np.array(equity_curve)
     peak = np.maximum.accumulate(eq)
-    drawdown = (eq - peak) / peak
-    return float(drawdown.min())
+    return float(((eq - peak) / peak).min())
 
 
 # ------------------------------------------------------------------
-def run_backtest(seed: int = 42) -> pd.DataFrame:
+def run_backtest(seed: int = 42) -> tuple[pd.DataFrame, dict]:
     random.seed(seed)
     np.random.seed(seed)
 
-    env = load_env("test")
-    tickers = env.episode_tickers()
-
+    env   = load_env("test")
     agent = QLearningAgent()
     agent.load(Q_TABLE_PATH)
     agent.epsilon = 0.0  # pure greedy
 
+    # --- Q-learning ---
+    ql_map = {t: (lambda s, t=t: agent.act(s, explore=False)) for t in env.tickers}
+    ql = _run_episode(env, ql_map)
+
+    # --- Buy-and-hold: accumulate MAX_LOTS for each ticker, then hold ---
+    bh_counts = {t: 0 for t in env.tickers}
+    def _bh_fn(ticker):
+        def _act(s):
+            if bh_counts[ticker] < MAX_LOTS:
+                bh_counts[ticker] += 1
+                return 2  # BUY
+            return 1      # HOLD
+        return _act
+    bh_map = {t: _bh_fn(t) for t in env.tickers}
+    bh = _run_episode(env, bh_map)
+
+    # --- Random ---
+    rnd_map = {t: (lambda s: random.randint(0, N_ACTIONS - 1)) for t in env.tickers}
+    rnd = _run_episode(env, rnd_map)
+
     results = []
-    equity_curves: dict[str, dict] = {}
+    equity_curves = {}
+    for strat_name, metrics in [("Q-Learning", ql), ("Buy-and-Hold", bh), ("Random", rnd)]:
+        results.append({
+            "strategy":     strat_name,
+            "total_return": metrics["total_return"],
+            "sharpe":       metrics["sharpe"],
+            "max_drawdown": metrics["max_drawdown"],
+        })
+        equity_curves[strat_name] = metrics["equity_curve"]
 
-    for ep_idx, ticker in enumerate(tickers):
-        # --- Q-learning ---
-        ql = _run_episode(env, lambda s: agent.act(s, explore=False), ep_idx)
-
-        # --- Buy-and-hold: BUY on day 0, HOLD every day after ---
-        _bh_step = [0]
-        def _bh_action(s, _counter=_bh_step):
-            act = 2 if _counter[0] == 0 else 1  # BUY first, then HOLD
-            _counter[0] += 1
-            return act
-        bh = _run_episode(env, _bh_action, ep_idx)
-
-        # --- Random ---
-        env.reset(ep_idx)
-        rnd = _run_episode(env, lambda s: random.randint(0, N_ACTIONS - 1), ep_idx)
-
-        equity_curves[ticker] = {
-            "Q-Learning": ql["equity_curve"],
-            "Buy-and-Hold": bh["equity_curve"],
-            "Random": rnd["equity_curve"],
-        }
-
-        for strat_name, metrics in [
-            ("Q-Learning", ql),
-            ("Buy-and-Hold", bh),
-            ("Random", rnd),
-        ]:
-            results.append(
-                {
-                    "ticker": ticker,
-                    "strategy": strat_name,
-                    "total_return": metrics["total_return"],
-                    "sharpe": metrics["sharpe"],
-                    "max_drawdown": metrics["max_drawdown"],
-                }
-            )
-
-    df = pd.DataFrame(results)
-    return df, equity_curves
+    return pd.DataFrame(results), equity_curves
 
 
 # ------------------------------------------------------------------
 def print_summary(df: pd.DataFrame):
-    print("\n=== Test Period (2024) Performance ===\n")
-    for strat in ["Q-Learning", "Buy-and-Hold", "Random"]:
-        sub = df[df["strategy"] == strat]
-        print(f"  {strat}")
-        print(f"    Avg return  : {sub['total_return'].mean()*100:.1f}%")
-        print(f"    Avg Sharpe  : {sub['sharpe'].mean():.2f}")
-        print(f"    Avg max DD  : {sub['max_drawdown'].mean()*100:.1f}%")
+    print("\n=== Test Period (2024) Portfolio Performance ===\n")
+    for _, row in df.iterrows():
+        print(f"  {row['strategy']}")
+        print(f"    Total return : {row['total_return']*100:.1f}%")
+        print(f"    Sharpe       : {row['sharpe']:.2f}")
+        print(f"    Max drawdown : {row['max_drawdown']*100:.1f}%")
         print()
 
-    print("--- Per-ticker breakdown ---")
-    pivot = df.pivot(index=["ticker"], columns="strategy", values="total_return") * 100
-    print(pivot.round(1).to_string())
 
-
+# ------------------------------------------------------------------
 if __name__ == "__main__":
     df, curves = run_backtest()
     print_summary(df)
@@ -143,4 +122,4 @@ if __name__ == "__main__":
         Path(__file__).parent.parent / "data" / "processed" / "backtest_results.csv",
         index=False,
     )
-    print("\nResults saved to data/processed/backtest_results.csv")
+    print("Results saved to data/processed/backtest_results.csv")

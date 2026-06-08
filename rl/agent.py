@@ -58,38 +58,37 @@ class QLearningAgent:
 
 
 # ------------------------------------------------------------------
-def train(n_passes: int = 50, seed: int = 42) -> QLearningAgent:
+def train(n_passes: int = 200, seed: int = 42) -> QLearningAgent:
     """
-    Train over all ticker episodes for `n_passes` full sweeps.
-    Each pass shuffles the episode order to reduce ordering bias.
+    Train the portfolio env for `n_passes` full sweeps over all trading dates.
+    Each pass runs all tickers simultaneously for every date in the train split.
+    Per-ticker rewards are used for Q-updates; shared cash enforces capital constraint.
     """
     random.seed(seed)
     np.random.seed(seed)
 
-    env = load_env("train")
+    env   = load_env("train")
     agent = QLearningAgent()
 
-    episode_rewards: list[float] = []
-
     for pass_idx in range(n_passes):
-        ep_order = list(range(env.n_episodes))
-        random.shuffle(ep_order)
-
+        states      = env.reset()
+        done        = False
         pass_reward = 0.0
-        for ep_idx in ep_order:
-            state = env.reset(ep_idx)
-            done = False
-            while not done:
-                action = agent.act(state, explore=True)
-                next_state, reward, done = env.step(action)
-                agent.update(state, action, reward, next_state, done)
-                state = next_state
-                pass_reward += reward
+
+        while not done:
+            actions = {t: agent.act(states[t], explore=True) for t in env.tickers}
+            next_states, ticker_rewards, total_reward, done = env.step(actions)
+
+            for t in env.tickers:
+                agent.update(states[t], actions[t], ticker_rewards[t],
+                             next_states[t], done)
+
+            states       = next_states
+            pass_reward += total_reward
 
         agent.decay_epsilon()
-        episode_rewards.append(pass_reward)
 
-        if (pass_idx + 1) % 10 == 0:
+        if (pass_idx + 1) % 20 == 0:
             print(
                 f"Pass {pass_idx+1:3d}/{n_passes}  "
                 f"reward={pass_reward:.4f}  "
@@ -115,5 +114,5 @@ def policy_summary(agent: QLearningAgent):
 
 
 if __name__ == "__main__":
-    agent = train(n_passes=100)
+    agent = train(n_passes=200)
     policy_summary(agent)
