@@ -27,7 +27,7 @@ from pathlib import Path
 PROCESSED   = Path(__file__).parent.parent / "data" / "processed"
 RL_PATH     = PROCESSED / "rl_ready_dataset.csv"
 TRENDS_PATH = PROCESSED / "google_trends_features.csv"
-TRAIN_END   = "2023-12-31"
+TRAIN_END   = "2024-12-31"
 
 ACTIONS       = {0: "SELL", 1: "HOLD", 2: "BUY"}
 N_ACTIONS     = 3
@@ -91,7 +91,7 @@ def _build_dataset() -> pd.DataFrame:
 
     train_mask = df["date"] <= TRAIN_END
 
-    df["trend_bucket"]         = _bucket(df["ai_trend_score"],          train_mask, n=3)
+    df["trend_bucket"]         = _bucket(df["ai_trend_score"].fillna(0),  train_mask, n=3)
     df["volume_bucket"]        = _bucket(df["volume_zscore"],            train_mask, n=3)
     df["volatility_bucket"]    = _bucket(df["rolling_volatility_20d"],   train_mask, n=3)
     df["recent_return_bucket"] = _bucket(df["daily_return"],             train_mask, n=3)
