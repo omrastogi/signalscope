@@ -2,8 +2,8 @@
 Backtesting framework for SignalScope portfolio environment.
 
 Runs three strategies over the test split (2024) on the full 6-ticker
-portfolio and prints a performance comparison: Q-learning, buy-and-hold,
-random. One shared $10,000 account across all tickers.
+portfolio. agent_fn_map functions return (action, lot_size) tuples so
+dynamic lot sizing flows through cleanly.
 """
 
 import random
@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
-from rl.environment import load_env, N_ACTIONS, MAX_LOTS
+from rl.environment import load_env, N_ACTIONS, MAX_LOTS, LOT_SIZE
 from rl.agent import QLearningAgent, Q_TABLE_PATH
 
 STARTING_CAPITAL = 10_000.0
@@ -20,9 +20,8 @@ STARTING_CAPITAL = 10_000.0
 # ------------------------------------------------------------------
 def _run_episode(env, agent_fn_map: dict) -> dict:
     """
-    Run one full episode (all test dates) with the given per-ticker action fns.
-    agent_fn_map: {ticker: callable(state_str) -> action_int}
-    Returns performance metrics and daily equity curve.
+    Run one full episode with per-ticker action functions.
+    agent_fn_map: {ticker: callable(state_str) -> (action_int, lot_size_int)}
     """
     states = env.reset()
     done   = False
@@ -30,8 +29,11 @@ def _run_episode(env, agent_fn_map: dict) -> dict:
     daily_returns = []
 
     while not done:
-        actions = {t: agent_fn_map[t](states[t]) for t in env.tickers}
-        next_states, _, total_reward, done = env.step(actions)
+        action_lots = {t: agent_fn_map[t](states[t]) for t in env.tickers}
+        actions     = {t: al[0] for t, al in action_lots.items()}
+        lot_sizes   = {t: al[1] for t, al in action_lots.items()}
+
+        next_states, _, total_reward, done = env.step(actions, lot_sizes)
         equity_curve.append(env.portfolio_value)
         daily_returns.append(total_reward)
         states = next_states
@@ -60,7 +62,11 @@ def _max_drawdown(equity_curve: list[float]) -> float:
 
 
 # ------------------------------------------------------------------
-def run_backtest(seed: int = 42) -> tuple[pd.DataFrame, dict]:
+def run_backtest(
+    seed:           int  = 42,
+    use_confidence: bool = False,
+    use_vol:        bool = False,
+) -> tuple[pd.DataFrame, dict]:
     random.seed(seed)
     np.random.seed(seed)
 
@@ -69,24 +75,30 @@ def run_backtest(seed: int = 42) -> tuple[pd.DataFrame, dict]:
     agent.load(Q_TABLE_PATH)
     agent.epsilon = 0.0  # pure greedy
 
-    # --- Q-learning ---
-    ql_map = {t: (lambda s, t=t: agent.act(s, explore=False)) for t in env.tickers}
+    # --- Q-learning (with dynamic lot sizing flags) ---
+    ql_map = {
+        t: (lambda s, t=t: agent.act(s, explore=False,
+                                     use_confidence=use_confidence,
+                                     use_vol=use_vol))
+        for t in env.tickers
+    }
     ql = _run_episode(env, ql_map)
 
-    # --- Buy-and-hold: accumulate MAX_LOTS for each ticker, then hold ---
+    # --- Buy-and-hold: accumulate MAX_LOTS then hold (fixed lot size) ---
     bh_counts = {t: 0 for t in env.tickers}
     def _bh_fn(ticker):
         def _act(s):
             if bh_counts[ticker] < MAX_LOTS:
                 bh_counts[ticker] += 1
-                return 2  # BUY
-            return 1      # HOLD
+                return 2, LOT_SIZE
+            return 1, LOT_SIZE
         return _act
     bh_map = {t: _bh_fn(t) for t in env.tickers}
     bh = _run_episode(env, bh_map)
 
-    # --- Random ---
-    rnd_map = {t: (lambda s: random.randint(0, N_ACTIONS - 1)) for t in env.tickers}
+    # --- Random (fixed lot size) ---
+    rnd_map = {t: (lambda s: (random.randint(0, N_ACTIONS - 1), LOT_SIZE))
+               for t in env.tickers}
     rnd = _run_episode(env, rnd_map)
 
     results = []
@@ -107,8 +119,9 @@ def run_backtest(seed: int = 42) -> tuple[pd.DataFrame, dict]:
 def print_summary(df: pd.DataFrame):
     print("\n=== Test Period (2024) Portfolio Performance ===\n")
     for _, row in df.iterrows():
+        final = STARTING_CAPITAL * (1 + row["total_return"])
         print(f"  {row['strategy']}")
-        print(f"    Total return : {row['total_return']*100:.1f}%")
+        print(f"    Final value  : ${final:,.0f}  ({row['total_return']*100:+.1f}%)")
         print(f"    Sharpe       : {row['sharpe']:.2f}")
         print(f"    Max drawdown : {row['max_drawdown']*100:.1f}%")
         print()
