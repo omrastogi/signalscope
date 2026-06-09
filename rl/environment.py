@@ -40,6 +40,10 @@ STOP_LOSS_PCT         = 0.10   # auto-sell ticker if price < avg_entry × (1 −
 LIQUIDATION_THRESHOLD = 0.50   # force-sell all positions if portfolio < 50 % of start
 BANKRUPTCY_THRESHOLD  = 500.0  # end episode if portfolio < $500 after defensive actions
 
+# Dynamic lot sizing bounds (used when lot_sizes are passed to step())
+MIN_LOT = 5
+MAX_LOT = 100
+
 
 def _bucket(series: pd.Series, train_mask: pd.Series, n: int = 3) -> pd.Series:
     """Quantile-bucket a series using only training rows to set boundaries."""
@@ -134,7 +138,9 @@ class TradingEnv:
             for t in self.tickers
         }
 
-        self.cash     = STARTING_CASH
+        self.starting_cash = STARTING_CASH
+        self.lot_size      = LOT_SIZE
+        self.cash          = STARTING_CASH
         self.shares:    dict[str, int]   = {t: 0   for t in self.tickers}
         self.avg_cost:  dict[str, float] = {t: 0.0 for t in self.tickers}
         self._step_idx = 0
@@ -143,7 +149,7 @@ class TradingEnv:
     def _make_state(self, ticker: str) -> str:
         date = self.dates[self._step_idx]
         sig  = self.data_by_ticker[ticker].loc[date, "signal_state"]
-        lots = self.shares[ticker] // LOT_SIZE
+        lots = self.shares[ticker] // self.lot_size
         return f"{sig}|lots={lots}"
 
     @property
@@ -157,16 +163,28 @@ class TradingEnv:
         return self.cash + stock_val
 
     # ------------------------------------------------------------------
-    def reset(self) -> dict[str, str]:
-        self.cash      = STARTING_CASH
-        self.shares    = {t: 0   for t in self.tickers}
-        self.avg_cost  = {t: 0.0 for t in self.tickers}
-        self._step_idx = 0
+    def reset(
+        self,
+        starting_cash: float | None = None,
+        lot_size:      int   | None = None,
+    ) -> dict[str, str]:
+        self.starting_cash = starting_cash if starting_cash is not None else STARTING_CASH
+        self.lot_size      = lot_size      if lot_size      is not None else LOT_SIZE
+        self.cash          = self.starting_cash
+        self.shares        = {t: 0   for t in self.tickers}
+        self.avg_cost      = {t: 0.0 for t in self.tickers}
+        self._step_idx     = 0
         return {t: self._make_state(t) for t in self.tickers}
 
     def step(
-        self, actions: dict[str, int]
+        self,
+        actions:   dict[str, int],
+        lot_sizes: dict[str, int] | None = None,
     ) -> tuple[dict[str, str], dict[str, float], float, bool]:
+        """
+        lot_sizes: optional per-ticker lot size (shares per transaction).
+                   Falls back to LOT_SIZE when None.
+        """
         date   = self.dates[self._step_idx]
         prices = {t: float(self.data_by_ticker[t].loc[date, "close"]) for t in self.tickers}
 
@@ -174,21 +192,26 @@ class TradingEnv:
         for ticker in self.tickers:
             action = actions[ticker]
             price  = prices[ticker]
+            lot    = lot_sizes[ticker] if lot_sizes else self.lot_size
+
             if action == 2:  # BUY
-                cost = LOT_SIZE * price
-                if self.shares[ticker] < MAX_LOTS * LOT_SIZE and self.cash >= cost:
+                max_shares  = MAX_LOTS * self.lot_size     # hard cap scales with lot
+                can_buy     = max(0, max_shares - self.shares[ticker])
+                actual_lot  = min(lot, can_buy)
+                cost        = actual_lot * price
+                if actual_lot > 0 and self.cash >= cost:
                     old = self.shares[ticker]
-                    # Update weighted average entry price
                     self.avg_cost[ticker] = (
-                        (old * self.avg_cost[ticker] + LOT_SIZE * price)
-                        / (old + LOT_SIZE)
+                        (old * self.avg_cost[ticker] + actual_lot * price)
+                        / (old + actual_lot)
                     )
-                    self.shares[ticker] += LOT_SIZE
+                    self.shares[ticker] += actual_lot
                     self.cash           -= cost
-            elif action == 0:  # SELL one lot
-                if self.shares[ticker] >= LOT_SIZE:
-                    self.shares[ticker] -= LOT_SIZE
-                    self.cash           += LOT_SIZE * price
+            elif action == 0:  # SELL
+                actual_lot = min(lot, self.shares[ticker])
+                if actual_lot > 0:
+                    self.shares[ticker] -= actual_lot
+                    self.cash           += actual_lot * price
                     if self.shares[ticker] == 0:
                         self.avg_cost[ticker] = 0.0
             # HOLD (1): no change
@@ -205,7 +228,7 @@ class TradingEnv:
         # 3. Liquidation: if total portfolio value < 50 % of starting capital,
         #    force-sell everything to preserve remaining cash
         pv = self.cash + sum(self.shares[t] * prices[t] for t in self.tickers)
-        if pv < STARTING_CASH * LIQUIDATION_THRESHOLD:
+        if pv < self.starting_cash * LIQUIDATION_THRESHOLD:
             for ticker in self.tickers:
                 if self.shares[ticker] > 0:
                     self.cash            += self.shares[ticker] * prices[ticker]
@@ -215,7 +238,7 @@ class TradingEnv:
         # 4. Bankruptcy: if portfolio is still below threshold, end the episode
         pv = self.cash + sum(self.shares[t] * prices[t] for t in self.tickers)
         if pv < BANKRUPTCY_THRESHOLD:
-            penalty      = (pv - STARTING_CASH) / STARTING_CASH   # e.g. −0.95
+            penalty      = (pv - self.starting_cash) / self.starting_cash   # e.g. −0.95
             per_ticker   = penalty / len(self.tickers)
             last_states  = {t: self._make_state_at(t, date) for t in self.tickers}
             return last_states, {t: per_ticker for t in self.tickers}, penalty, True
@@ -234,7 +257,7 @@ class TradingEnv:
 
         for ticker in self.tickers:
             daily_return = float(self.data_by_ticker[ticker].loc[next_date, "daily_return"])
-            r = (self.shares[ticker] * prices[ticker] * daily_return) / STARTING_CASH
+            r = (self.shares[ticker] * prices[ticker] * daily_return) / self.starting_cash
             ticker_rewards[ticker] = r
             total_reward          += r
 
@@ -244,7 +267,7 @@ class TradingEnv:
     def _make_state_at(self, ticker: str, date) -> str:
         """State string for a specific date (used at terminal step)."""
         sig  = self.data_by_ticker[ticker].loc[date, "signal_state"]
-        lots = self.shares[ticker] // LOT_SIZE
+        lots = self.shares[ticker] // self.lot_size
         return f"{sig}|lots={lots}"
 
     # ------------------------------------------------------------------

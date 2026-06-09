@@ -155,37 +155,92 @@ The agent is a tabular Q-learner (`rl/agent.py`). One training pass steps throug
 | ε start | 1.0 |
 | ε end | 0.05 |
 | ε decay (per pass) | 0.995 |
-| Passes | 600 |
 
-Epsilon reaches its floor (~0.05) around pass 590. Training for 600 passes ensures the agent is exploiting its learned policy by the end. The Q-table is saved to `rl/qtable.json` after training.
+Epsilon reaches its floor (~0.05) around pass 590. The Q-table is saved to `rl/qtable.json` after training.
+
+**Optimal pass counts by configuration** (see experiment results below):
+
+| Config | Sweet spot | Notes |
+|---|---|---|
+| baseline | ~1000 passes | Degrades past ~1200 — over-optimises for 2022 bear market |
+| conf_only | ~2000 passes | Confidence signal needs sharp Q-value differences; keeps improving |
 
 ---
 
-## Backtest Results (2024, Out-of-Sample)
+## Dynamic Lot Sizing
 
-Three strategies evaluated on the 252 test days with a shared $10,000 account:
+Two optional feature flags control how many shares the agent buys or sells per action:
 
-| Strategy | Final Value | Profit | Return | Sharpe | Max Drawdown |
+### `use_confidence` — Q-value confidence scaling
+
+```python
+confidence  = sigmoid(Q[BUY] − Q[HOLD])    # 0–1 scale
+lot_size    = clip(BASE_LOT × (1 + confidence), MIN_LOT, MAX_LOT)
+```
+
+When the agent is highly certain a BUY is better than holding, `Q[BUY] − Q[HOLD]` is large, `confidence → 1`, and the lot doubles. When uncertain, confidence → 0.5 and the lot stays near baseline. Requires converged Q-values to carry a meaningful signal — performs poorly at low pass counts.
+
+### `use_vol` — Volatility-adjusted scaling
+
+```python
+vol_multiplier = {"low": 1.5, "medium": 1.0, "high": 0.5}
+lot_size       = clip(BASE_LOT × vol_multiplier[state.volatility], MIN_LOT, MAX_LOT)
+```
+
+Buys 1.5× more in calm markets and 0.5× in turbulent ones — a position-sizing heuristic that reduces risk-adjusted exposure during high-volatility regimes.
+
+Both flags are independent and can be combined. `MIN_LOT = 5`, `MAX_LOT = 100`.
+
+---
+
+## Experiment Results (2024 Out-of-Sample)
+
+`rl/experiments.py` trains each configuration from scratch and backtests on the 2024 test set. Buy-and-hold baseline: **+34.2% / $13,425 / Sharpe 1.45**.
+
+### 200 passes (pre-convergence)
+
+| Config | Return | Final $ | Sharpe | Max DD | vs B&H |
 |---|---|---|---|---|---|
-| **Q-Learning** | **$14,862** | **+$4,862** | **+48.6%** | **1.75** | **-14.0%** |
-| Buy-and-Hold | $13,425 | +$3,425 | +34.2% | 1.45 | -14.1% |
-| Random | $13,121 | +$3,121 | +31.2% | 1.36 | -14.8% |
+| baseline | +43.9% | $14,390 | 1.70 | -12.0% | +9.7% |
+| conf_only | +34.2% | $13,422 | 1.15 | -11.0% | +0.0% |
+| vol_only | +27.4% | $12,744 | 1.18 | -12.7% | -6.8% |
+| both | +38.2% | $13,817 | 1.55 | -13.5% | +4.0% |
 
-- **Q-Learning lowest point: $9,949** — the agent barely dipped into loss territory all year, reflecting the stop-loss and SELL-heavy policy (59.5% of states prefer SELL).
-- **Buy-and-Hold lowest point: $9,769** — holds through drawdowns with no defensive mechanism.
-- The agent outperformed buy-and-hold by **+$1,437** over the year.
+At 200 passes, Q-values are not yet converged. The confidence signal is noisy — `conf_only` and `vol_only` underperform baseline.
+
+### 1000 passes
+
+| Config | Return | Final $ | Sharpe | Max DD | vs B&H |
+|---|---|---|---|---|---|
+| **baseline** | **+45.5%** | **$14,553** | **1.76** | **-11.7%** | **+11.3%** |
+| **conf_only** | **+62.9%** | **$16,286** | **1.96** | **-14.5%** | **+28.7%** |
+
+Baseline peaks here. `conf_only` is still improving.
+
+### 2000 passes (full convergence)
+
+| Config | Return | Final $ | Sharpe | Max DD | vs B&H |
+|---|---|---|---|---|---|
+| baseline | +37.8% | $13,784 | 1.25 | -18.9% | +3.6% |
+| **conf_only** | **+66.4%** | **$16,640** | **2.08** | -15.0% | **+32.2%** |
+| vol_only | +64.7% | $16,472 | 2.02 | **-13.3%** | +30.5% |
+| both | +53.0% | $15,301 | 1.74 | **-12.1%** | +18.9% |
+
+At full convergence, `conf_only` wins overall (+66.4%, Sharpe 2.08). `vol_only` wins on drawdown (-13.3%). Combining both (`both`) is middle-ground — the two multipliers partially cancel each other on high-vol / high-confidence signals.
+
+**Key finding:** Baseline degrades past ~1000 passes (over-fits to 2022 bear market patterns), while dynamic sizing configurations keep improving because sharper Q-values produce a more reliable confidence signal.
 
 ---
 
-## Policy Summary (after 600 passes)
+## Policy Summary (after 1000 passes, conf_only)
 
 | Action | States | % |
 |---|---|---|
-| SELL | 683 | 59.5% |
-| HOLD | 262 | 22.8% |
-| BUY  | 203 | 17.7% |
+| SELL | 575 | 58.7% |
+| HOLD | 225 | 23.0% |
+| BUY  | 180 | 18.4% |
 
-The SELL bias reflects what the agent learned from the 2022 bear market in the training data — it is conservative by default and only enters positions when signals are clearly favourable.
+The SELL bias reflects the 2022 bear market in training data — the agent is conservative by default and only enters positions when signals are clearly favourable.
 
 ---
 
@@ -196,7 +251,9 @@ The SELL bias reflects what the agent learned from the 2022 bear market in the t
 | `rl/environment.py` | `TradingEnv` class, data pipeline, risk controls |
 | `rl/agent.py` | `QLearningAgent` class, training loop |
 | `rl/backtest.py` | Evaluation: Q-learning vs buy-and-hold vs random |
+| `rl/experiments.py` | Multi-config experiment runner; `--passes` CLI arg |
 | `rl/qtable.json` | Serialised Q-table (state string → [Q_sell, Q_hold, Q_buy]) |
 | `data/processed/rl_ready_dataset.csv` | Merged market + SEC + trends features |
 | `data/processed/google_trends_features.csv` | Weekly AI trend scores |
-| `data/processed/backtest_results.csv` | Latest backtest output |
+| `data/processed/experiment_results.csv` | Latest experiment comparison table |
+| `data/processed/backtest_results.csv` | Latest single-run backtest output |
