@@ -1,5 +1,5 @@
 config,use_confidence,use_vol,ql_return_pct,ql_final_value,ql_sharpe,ql_max_dd_pct,bh_return_pct
-baseline,False,False,37.8,13784.0,1.25,-18.9,34.2
-conf_only,True,False,66.4,16640.0,2.08,-15.0,34.2
-vol_only,False,True,64.7,16472.0,2.02,-13.3,34.2
-both,True,True,53.0,15301.0,1.74,-12.1,34.2
+baseline,False,False,40.5,14051.0,1.38,-13.4,34.2
+conf_only,True,False,62.0,16197.0,1.95,-13.0,34.2
+vol_only,False,True,69.5,16952.0,1.88,-19.6,34.2
+both,True,True,62.9,16295.0,1.98,-11.2,34.2
