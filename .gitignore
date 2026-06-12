@@ -101,3 +101,8 @@ reports/src/*.synctex.gz
 # Internal planning docs
 # =========================
 docs/superpowers/
+
+# =========================
+# Generated report PDF
+# =========================
+reports/signalscope_project_summary.pdf
