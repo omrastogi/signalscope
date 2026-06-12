@@ -1,0 +1,5 @@
+config,return,sharpe,max_dd
+no_controls,34.79,1.125,-24.32
+stop_loss_only,35.52,1.204,-26.44
+liquidation_only,34.79,1.125,-24.32
+both (baseline),35.52,1.204,-26.44

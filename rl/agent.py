@@ -29,7 +29,7 @@ from rl.environment import (
     load_env, N_ACTIONS, ACTIONS, LOT_SIZE, MIN_LOT, MAX_LOT, STARTING_CASH,
 )
 
-Q_TABLE_PATH = Path(__file__).parent / "qtable.json"
+Q_TABLE_PATH = Path(__file__).parent.parent / "models" / "qtable.json"
 
 _VOL_MULTIPLIER  = {"low": 1.5, "medium": 1.0, "high": 0.5}
 
@@ -192,6 +192,75 @@ def train(
 
     agent.save()
     return agent
+
+
+# ------------------------------------------------------------------
+def train_with_eval(
+    n_passes:            int  = 5000,
+    eval_interval:       int  = 500,
+    use_confidence:      bool = False,
+    use_vol:             bool = False,
+    n_episodes_per_pass: int  = 1,
+    randomize:           bool = False,
+    train_start:         str | None = None,
+    seed:                int  = 42,
+) -> tuple[QLearningAgent, list[dict]]:
+    """Train and eval at every eval_interval passes. Returns (agent, checkpoints)."""
+    from rl.backtest import run_backtest  # local import — avoids circular dependency
+
+    random.seed(seed)
+    np.random.seed(seed)
+
+    env   = load_env("train", train_start=train_start)
+    agent = QLearningAgent()
+    checkpoints: list[dict] = []
+
+    for pass_idx in range(n_passes):
+        for _ep in range(n_episodes_per_pass):
+            cash = random.choice(CASH_OPTIONS) if randomize else STARTING_CASH
+            lot  = random.choice(LOT_OPTIONS)  if randomize else LOT_SIZE
+
+            states = env.reset(starting_cash=cash, lot_size=lot)
+            done   = False
+
+            while not done:
+                action_lots = {
+                    t: agent.act(states[t], explore=True,
+                                 use_confidence=use_confidence,
+                                 use_vol=use_vol, base_lot=lot)
+                    for t in env.tickers
+                }
+                actions   = {t: al[0] for t, al in action_lots.items()}
+                lot_sizes = {t: al[1] for t, al in action_lots.items()}
+
+                next_states, ticker_rewards, _, done = env.step(actions, lot_sizes)
+
+                for t in env.tickers:
+                    agent.update(states[t], actions[t], ticker_rewards[t],
+                                 next_states[t], done)
+                states = next_states
+
+        agent.decay_epsilon()
+
+        if (pass_idx + 1) % 100 == 0:
+            pct = (pass_idx + 1) / n_passes * 100
+            print(f"  pass {pass_idx+1:4d}/{n_passes}  ({pct:.0f}%)  eps={agent.epsilon:.3f}  states={len(agent.q)}", flush=True)
+
+        if (pass_idx + 1) % eval_interval == 0:
+            df_eval, _ = run_backtest(agent=agent,
+                                      use_confidence=use_confidence,
+                                      use_vol=use_vol)
+            ql = df_eval[df_eval["strategy"] == "Q-Learning"].iloc[0]
+            cp = {
+                "passes": pass_idx + 1,
+                "return": round(ql["total_return"] * 100, 2),
+                "sharpe": round(ql["sharpe"], 3),
+                "max_dd": round(ql["max_drawdown"] * 100, 2),
+            }
+            checkpoints.append(cp)
+            print(f"  [Eval @ {pass_idx+1}]  return={cp['return']:.1f}%  sharpe={cp['sharpe']:.3f}  max_dd={cp['max_dd']:.1f}%", flush=True)
+
+    return agent, checkpoints
 
 
 # ------------------------------------------------------------------

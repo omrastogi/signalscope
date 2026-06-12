@@ -20,8 +20,8 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 
-RAW      = Path(__file__).parent / "raw"
-PROCESSED = Path(__file__).parent / "processed"
+RAW       = Path(__file__).parent.parent / "data" / "raw"
+PROCESSED = Path(__file__).parent.parent / "data" / "processed" / "datasets"
 
 # Tickers to include — GOOGL raw file is renamed to GOOG for env consistency
 TICKER_MAP = {

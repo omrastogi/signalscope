@@ -86,3 +86,18 @@ Thumbs.db
 # =========================
 *.tmp
 *.temp
+
+# =========================
+# LaTeX build artifacts
+# =========================
+reports/_build/
+reports/src/*.aux
+reports/src/*.log
+reports/src/*.out
+reports/src/*.toc
+reports/src/*.synctex.gz
+
+# =========================
+# Internal planning docs
+# =========================
+docs/superpowers/

@@ -55,7 +55,7 @@ def run_experiments(
         )
         policy_summary(agent)
 
-        df, curves = run_backtest(use_confidence=use_conf, use_vol=use_vol)
+        df, curves = run_backtest(agent=agent, use_confidence=use_conf, use_vol=use_vol)
         ql = df[df["strategy"] == "Q-Learning"].iloc[0]
         bh = df[df["strategy"] == "Buy-and-Hold"].iloc[0]
 

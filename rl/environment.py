@@ -25,8 +25,8 @@ import numpy as np
 from pathlib import Path
 
 PROCESSED   = Path(__file__).parent.parent / "data" / "processed"
-RL_PATH     = PROCESSED / "rl_ready_dataset.csv"
-TRENDS_PATH = PROCESSED / "google_trends_features.csv"
+RL_PATH     = PROCESSED / "datasets"  / "rl_ready_dataset.csv"
+TRENDS_PATH = PROCESSED / "features"  / "google_trends_features.csv"
 TRAIN_END   = "2024-12-31"
 
 ACTIONS       = {0: "SELL", 1: "HOLD", 2: "BUY"}
@@ -58,7 +58,7 @@ def _bucket(series: pd.Series, train_mask: pd.Series, n: int = 3) -> pd.Series:
     return pd.cut(series, bins=[-np.inf] + boundaries + [np.inf], labels=labels)
 
 
-def _build_dataset() -> pd.DataFrame:
+def _build_dataset(train_start: str | None = None) -> pd.DataFrame:
     """
     Load market + trends data and produce a clean daily feature DataFrame.
     Trend values are forward-filled from weekly to daily with merge_asof.
@@ -89,7 +89,8 @@ def _build_dataset() -> pd.DataFrame:
     ])
     df = df[df["date"].isin(valid_dates)].copy()
 
-    train_mask = df["date"] <= TRAIN_END
+    train_start_dt = pd.Timestamp(train_start) if train_start else df["date"].min()
+    train_mask = (df["date"] >= train_start_dt) & (df["date"] <= pd.Timestamp(TRAIN_END))
 
     df["trend_bucket"]         = _bucket(df["ai_trend_score"].fillna(0),  train_mask, n=3)
     df["volume_bucket"]        = _bucket(df["volume_zscore"],            train_mask, n=3)
@@ -110,13 +111,19 @@ def _build_dataset() -> pd.DataFrame:
     return df
 
 
-def load_env(split: str = "train") -> "TradingEnv":
-    df = _build_dataset()
+def load_env(
+    split: str = "train",
+    train_start: str | None = None,
+    use_stop_loss: bool = True,
+    use_liquidation: bool = True,
+) -> "TradingEnv":
+    df = _build_dataset(train_start=train_start)
     if split == "train":
-        df = df[df["date"] <= TRAIN_END]
+        start_dt = pd.Timestamp(train_start) if train_start else df["date"].min()
+        df = df[(df["date"] >= start_dt) & (df["date"] <= pd.Timestamp(TRAIN_END))]
     else:
-        df = df[df["date"] > TRAIN_END]
-    return TradingEnv(df)
+        df = df[df["date"] > pd.Timestamp(TRAIN_END)]
+    return TradingEnv(df, use_stop_loss=use_stop_loss, use_liquidation=use_liquidation)
 
 
 # ------------------------------------------------------------------
@@ -128,7 +135,7 @@ class TradingEnv:
     step(actions: dict[ticker, int]) → (next_states, ticker_rewards, total_reward, done)
     """
 
-    def __init__(self, data: pd.DataFrame):
+    def __init__(self, data: pd.DataFrame, use_stop_loss: bool = True, use_liquidation: bool = True):
         self.tickers = sorted(data["ticker"].unique())
         self.dates   = sorted(data["date"].unique())
 
@@ -138,6 +145,8 @@ class TradingEnv:
             for t in self.tickers
         }
 
+        self.use_stop_loss   = use_stop_loss
+        self.use_liquidation = use_liquidation
         self.starting_cash = STARTING_CASH
         self.lot_size      = LOT_SIZE
         self.cash          = STARTING_CASH
@@ -218,22 +227,24 @@ class TradingEnv:
 
         # 2. Stop-loss: auto-sell a ticker's entire position if price fell ≥ 10 %
         #    below the average entry price
-        for ticker in self.tickers:
-            if self.shares[ticker] > 0 and self.avg_cost[ticker] > 0:
-                if prices[ticker] < self.avg_cost[ticker] * (1.0 - STOP_LOSS_PCT):
-                    self.cash           += self.shares[ticker] * prices[ticker]
-                    self.shares[ticker]  = 0
-                    self.avg_cost[ticker] = 0.0
+        if self.use_stop_loss:
+            for ticker in self.tickers:
+                if self.shares[ticker] > 0 and self.avg_cost[ticker] > 0:
+                    if prices[ticker] < self.avg_cost[ticker] * (1.0 - STOP_LOSS_PCT):
+                        self.cash           += self.shares[ticker] * prices[ticker]
+                        self.shares[ticker]  = 0
+                        self.avg_cost[ticker] = 0.0
 
         # 3. Liquidation: if total portfolio value < 50 % of starting capital,
         #    force-sell everything to preserve remaining cash
-        pv = self.cash + sum(self.shares[t] * prices[t] for t in self.tickers)
-        if pv < self.starting_cash * LIQUIDATION_THRESHOLD:
-            for ticker in self.tickers:
-                if self.shares[ticker] > 0:
-                    self.cash            += self.shares[ticker] * prices[ticker]
-                    self.shares[ticker]   = 0
-                    self.avg_cost[ticker] = 0.0
+        if self.use_liquidation:
+            pv = self.cash + sum(self.shares[t] * prices[t] for t in self.tickers)
+            if pv < self.starting_cash * LIQUIDATION_THRESHOLD:
+                for ticker in self.tickers:
+                    if self.shares[ticker] > 0:
+                        self.cash            += self.shares[ticker] * prices[ticker]
+                        self.shares[ticker]   = 0
+                        self.avg_cost[ticker] = 0.0
 
         # 4. Bankruptcy: if portfolio is still below threshold, end the episode
         pv = self.cash + sum(self.shares[t] * prices[t] for t in self.tickers)
